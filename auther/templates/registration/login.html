@@ -1,0 +1,8 @@
+{% block content %}
+<!--このページが表示されることはほぼない-->
+  <h2>Googleアカウントでログインが必要です。</h2>
+  <p>なお、iniad以外の人はログインが出来ません。<br></p>
+    <ul>
+        <li><a href="{% url 'social:begin' 'google-oauth2' %}">Googleアカウントでログイン</a></li>
+    </ul>
+{% endblock %}

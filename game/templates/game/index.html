@@ -1,0 +1,70 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>チームで作るWebサイト</title>
+  <link rel="stylesheet" href="{% static 'game/css/index.css'%}">
+  <link rel="icon" type="image/x-icon" href="{% static 'game/picture/favicon.png' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  {% include "intern/header.html" %}
+  <div class="back">
+    <div class="txt">
+      <h1 id="title">ゲーム</h1>
+
+      <a href="#" id="top">↑ Top</a>
+
+      <div id="container">
+        <div class="side">
+          <aside class="sidebar">
+            <div class="sticky">
+              <ul>
+
+                <li><a href="{% url 'game:splatoon' %}">スプラトゥーン</a></li>
+                <li><a href="{% url 'game:lol' %}">リーグオブレジェンド</a></li>
+                <li><a href="{% url 'game:mariokart' %}">マリオカート</a></li>
+
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+
+        <div class="content">
+          <h2>スプラトゥーン</h2>
+          <p>
+            インクを撃って塗りあって、ナワバリを広げあう対戦ゲーム<br>
+            <img src="{% static 'game/picture/splatoon_top.png'%}" alt="スプラトゥーンの写真" width="400" height="250">
+          </p>
+
+
+          <h2>リーグオブレジェンド</h2>
+          <p>
+            140体程のキャラクターから5体を選び、自身の陣地を守り抜くゲーム<br>
+            <img src="{% static 'game/picture/lol_top.png'%}" alt="リーグオブレジェンドの写真" width="400" height="250">
+          </p>
+
+
+          <h2>マリオカート</h2>
+          <p>
+            任天堂のキャラクターが車やバイクに乗り、様々なコースを走るレースゲーム<br>
+            <img src="{% static 'game/picture/mariokart_home.png'%}" alt="マリオカートの写真" width="400" height="250">
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

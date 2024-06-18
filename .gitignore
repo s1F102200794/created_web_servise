@@ -1,0 +1,12 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+media
+.DS_Store
+venv
+*.node_modules
+.env
+:Zone.Identifier

@@ -1,0 +1,217 @@
+.map {
+  background-image: url(../img/Chubu.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+}
+
+.Niigata {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 330px;
+}
+
+.Toyama {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 250px;
+}
+
+.Nagano {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 90px;
+  left: 430px;
+}
+
+.Yamanashi {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 80px;
+  left: 500px;
+}
+
+.Shizuoka {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 220px;
+  left: 320px;
+}
+
+.Gihu {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 70px;
+}
+
+.Ishikawa {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -350px;
+  left: 50px;
+}
+
+.Hukui {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -330px;
+  left: 0px;
+}
+
+.Aichi {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -150px;
+  left: 200px;
+}
+
+@media (max-width: 576px) {
+  .map {
+    background-image: url(../img/Chubu.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 420px;
+  }
+  .Niigata {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 30px;
+    left: 260px;
+  }
+  
+  .Toyama {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 50px;
+    left: 180px;
+  }
+  
+  .Nagano {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 90px;
+    left: 300px;
+  }
+  
+  .Yamanashi {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 100px;
+    left: 350px;
+  }
+  
+  .Shizuoka {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 210px;
+    left: 270px;
+  }
+  
+  .Gihu {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 60px;
+    left: 60px;
+  }
+  
+  .Ishikawa {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -170px;
+    left: 70px;
+  }
+  
+  .Hukui {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -130px;
+    left: 10px;
+  }
+  
+  .Aichi {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -10px;
+    left: 140px;
+  }
+}
+/*
+.Niigata:hover {
+  background-color: #b6b6b6;
+}
+
+.Toyama:hover {
+  background-color: #b6b6b6;
+}
+
+.Nagano:hover {
+  background-color: #b6b6b6;
+}
+
+.Yamanashi:hover {
+  background-color: #b6b6b6;
+}
+
+.Shizuoka:hover {
+  background-color: #b6b6b6;
+}
+
+.Gihu:hover {
+  background-color: #b6b6b6;
+}
+
+.Ishikawa:hover {
+  background-color: #b6b6b6;
+}
+
+.Hukui:hover {
+  background-color: #b6b6b6;
+}
+
+.Aichi:hover {
+  background-color: #b6b6b6;
+}
+*/

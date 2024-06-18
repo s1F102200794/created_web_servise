@@ -1,0 +1,49 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>紹介</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'intern/favicon.png' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    {% include "intern/header.html" %}
+    <div class="back">
+        <div class="txt">
+            <h2><a href="{% url 'game:index' %}">ゲーム紹介サイト</a></h2>
+            <p>
+                大学1年の春学期にて作成した初めてのWebサイトになります。3人1チームにて作成し、発表したものになります。htmlとcssのみを使用した簡単なWebサイトです。
+            </p>
+
+            <h2><a href="{% url 'mymath:height_quiz' %}">算数自動採点・作成アプリ</a></h2>
+            <p>
+                大学2年の夏季集中講座(4日間)という短い時間で作成したchatGPTを使用したアプリになります。簡単なデモンストレーションを作成し、教員の人手不足をどのように解消するかという課題の為、
+                UX, UIは特段考えずに動くように作成しました。問題作成はgpt3.5-turboで行い、解答はgpt-4oで作成します。
+            </p>
+
+            <h2><a href="{% url 'weather:index' %}">天気予報アプリ</a></h2>
+            <p>
+                大学2年の秋学期にて作成しました。OpenWeatherMapの<a href="https://openweathermap.org/api">Weather
+                    API</a>を使用し、天気予報アプリを作成しました。
+                このアプリは個人作成になり、OpenAI
+                APIを使用し他の天気予報サイトとの差別化を図りました。なお、日本全体の天気予報でのChatGPTはgpt-3.5-turboになり、そのほかはgpt-4oになります。
+            </p>
+            <hr>
+            <p>6月18日 変更<br>算数の問題のラジオボタンでのpタグの表示を修正しました。</p>
+            <p>5月17日 変更<br>基本全てのページにヘッダーを追加しました。また、ログイン画面をきれいにしました。</p>
+            <p>5月15日 変更<br>gpt-4-turboをgpt-4oに変更しました。</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

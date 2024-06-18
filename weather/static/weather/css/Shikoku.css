@@ -1,0 +1,107 @@
+.map {
+  background-image: url(../img/Shikoku.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+}
+.Kagawa {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 20px;
+  left: 300px;
+}
+
+.Tokushima {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 200px;
+  left: 520px;
+}
+
+.Ehime {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.Kochi {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 80px;
+  left: 250px;
+}
+
+@media (max-width: 576px) {
+  .map {
+    background-image: url(../img/Shikoku.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 400px;
+  }
+  .Kagawa {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 20px;
+    left: 330px;
+  }
+  
+  .Tokushima {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 150px;
+    left: 380px;
+  }
+  
+  .Ehime {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 0px;
+    left: 10px;
+  }
+  
+  .Kochi {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 80px;
+    left: 200px;
+  }
+}
+
+/*
+.Kagawa:hover {
+  background-color: #b6b6b6;
+}
+
+.Tokushima:hover {
+  background-color: #b6b6b6;
+}
+
+.Ehime:hover {
+  background-color: #b6b6b6;
+}
+
+.Kochi:hover {
+  background-color: #b6b6b6;
+}
+*/

@@ -1,0 +1,332 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>日本全域</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'chatGPT/css/weather.css'%}">
+    <link rel="stylesheet" href="{% static 'chatGPT/css/index.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'chatGPT/img/favicon.png' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    {% include "intern/header.html" %}
+    <div class="back">
+        <div class="txt">
+            <header></header>
+            <main class="main">
+                <section class="test wrapper">
+                    <div class="test__container">
+                        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                            <div class="container">
+                                <a class="navbar-brand" href="{% url 'chatGPT:index' %}">地域</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                                    aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+                                        <h3 class="offcanvas-title text-light" id="offcanvasNavbarLabel">地域</h3>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="navbar-nav justify-content-end mb-2 mb-sm-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page"
+                                                    href="{% url 'chatGPT:index' %}">日本</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Hokkaido' %}">北海道</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Tohoku' %}">東北</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Kanto' %}">関東</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Chubu' %}">中部</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Kinki' %}">近畿</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Chugoku' %}">中国</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Shikoku' %}">四国</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{% url 'chatGPT:Kyusyu' %}">九州</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </nav>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="main col-sm-12 col-md-10 col-lg-8 col-xl-7">
+                                    <div class="map_jap">
+                                        <div class="Sapporo">
+                                            <div class="Weather_Form" onclick="redirectHokkaido()">
+                                                <div class='center'>
+                                                    <strong>札幌</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Sap_weather_info.weather_icon }}"></i></div>
+                                                    <div class='red'>{{ Sap_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Sap_weather_info.temperature_min }}</div>
+                                                    <br>{{ Sap_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Aomori">
+                                            <div class="Weather_Form" onclick="redirectTohoku()">
+                                                <div class='center'>
+                                                    <strong>青森</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Aomo_weather_info.weather_icon }}"></i></div>
+                                                    <div class='red'>{{ Aomo_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Aomo_weather_info.temperature_min }}</div>
+                                                    <br>{{ Aomo_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Sendai">
+                                            <div class="Weather_Form" onclick="redirectTohoku()">
+                                                <div class='center'>
+                                                    <strong>仙台</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Senda_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Senda_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Senda_weather_info.temperature_min }}</div>
+                                                    <br>{{ Senda_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Niigata">
+                                            <div class="Weather_Form" onclick="redirectChubu()">
+                                                <div class='center'>
+                                                    <strong>新潟</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Niiga_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Niiga_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Niiga_weather_info.temperature_min }}</div>
+                                                    <br>{{ Niiga_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Tokyo">
+                                            <div class="Weather_Form" onclick="redirectKanto()">
+                                                <div class='center'>
+                                                    <strong>東京</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Tokyo_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Tokyo_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Tokyo_weather_info.temperature_min }}</div>
+                                                    <br>{{ Tokyo_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Kanazawa">
+                                            <div class="Weather_Form" onclick="redirectChubu()">
+                                                <div class='center'>
+                                                    <strong>金沢</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Kanaz_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Kanaz_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Kanaz_weather_info.temperature_min }}</div>
+                                                    <br>{{ Kanaz_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Nagoya">
+                                            <div class="Weather_Form" onclick="redirectChubu()">
+                                                <div class='center'>
+                                                    <strong>名古屋</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Nagoya_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Nagoya_weather_info.temperature_max }}</div>/
+                                                    <div class="blue">
+                                                        {{ Nagoya_weather_info.temperature_min }}</div>
+                                                    <br>{{ Nagoya_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Osaka">
+                                            <div class="Weather_Form" onclick="redirectKinki()">
+                                                <div class='center'>
+                                                    <strong>大阪</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Osaka_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Osaka_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Osaka_weather_info.temperature_min }}</div>
+                                                    <br>{{ Osaka_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Tokushima">
+                                            <div class="Weather_Form" onclick="redirectShikoku()">
+                                                <div class='center'>
+                                                    <strong>徳島</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Toku_weather_info.weather_icon }}"></i></div>
+                                                    <div class='red'>{{ Toku_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Toku_weather_info.temperature_min }}</div>
+                                                    <br>{{ Toku_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Hiroshima">
+                                            <div class="Weather_Form" onclick="redirectChubu()">
+                                                <div class='center'>
+                                                    <strong>広島</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Hiro_weather_info.weather_icon }}"></i></div>
+                                                    <div class='red'>{{ Hiro_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Hiro_weather_info.temperature_min }}</div>
+                                                    <br>{{ Hiro_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Hukuoka">
+                                            <div class="Weather_Form" onclick="redirectKyusyu()">
+                                                <div class='center'>
+                                                    <strong>福岡</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Hukuo_weather_info.weather_icon }}"></i>
+                                                    </div>
+                                                    <div class='red'>{{ Hukuo_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Hukuo_weather_info.temperature_min }}</div>
+                                                    <br>{{ Hukuo_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Kagoshima">
+                                            <div class="Weather_Form" onclick="redirectKyusyu()">
+                                                <div class='center'>
+                                                    <strong>鹿児島</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Kago_weather_info.weather_icon }}"></i></div>
+                                                    <div class='red'>{{ Kago_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Kago_weather_info.temperature_min }}</div>
+                                                    <br>{{ Kago_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Naha">
+                                            <div class="Weather_Form">
+                                                <div class='center'>
+                                                    <strong>那覇</strong>
+                                                    <div class="logo"><i
+                                                            class="{{ Naha_weather_info.weather_icon }}"></i></div>
+                                                    <div class='red'>{{ Naha_weather_info.temperature_max }}</div>/<div
+                                                        class="blue">
+                                                        {{ Naha_weather_info.temperature_min }}</div>
+                                                    <br>{{ Naha_weather_info.humidity }}%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="attention">
+                                        ※openwethermapの無料版APIの使用により、最高気温と最低気温はその時間帯での最低気温と最高気温になっています。その為、差があまりありませんのでご注意ください。詳しくは、openwethermapの<a
+                                            href='https://openweathermap.org/forecast5#min'>公式サイト</a>をご確認ください。
+                                        <div class="cite"><a href="https://frame-illust.com/?p=10006">画像の引用元</a></div>
+                                    </div>
+                                </div>
+                                <div class="sidebar col-sm-12 col-md-2 col-lg-4 col-xl-5">
+                                    <h2>Chat GPTによるワンポイント解説</h2>
+                                    <h4>札幌、東京、鹿児島から予測される日本全体の天気予報</h4>
+                                    <p>{{ chat_results }}</p>
+                                    <hr>
+                                    <p>ChatGPTの読み込みに時間がかかります。この機能が不要な場合は以下のボタンから元のページに戻ってください。</p>
+                                    <a href="{% url 'weather:index' %}" class="btn btn-danger">移動</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer></footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous">
+            </script>
+            <!-- 本当はjsファイルに入れたかったが、urlが上手く反映されず断念-->
+            <script>
+                function redirectHokkaido() {
+                    window.location.href = "{% url 'chatGPT:Hokkaido' %}";
+                }
+
+                function redirectTohoku() {
+                    window.location.href = "{% url 'chatGPT:Tohoku' %}";
+                }
+
+                function redirectKanto() {
+                    window.location.href = "{% url 'chatGPT:Kanto' %}";
+                }
+
+                function redirectChubu() {
+                    window.location.href = "{% url 'chatGPT:Chubu' %}";
+                }
+
+                function redirectKinki() {
+                    window.location.href = "{% url 'chatGPT:Kinki' %}";
+                }
+
+                function redirectChugoku() {
+                    window.location.href = "{% url 'chatGPT:Chugoku' %}";
+                }
+
+                function redirectShikoku() {
+                    window.location.href = "{% url 'chatGPT:Shikoku' %}";
+                }
+
+                function redirectKyusyu() {
+                    window.location.href = "{% url 'chatGPT:Kyusyu' %}";
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

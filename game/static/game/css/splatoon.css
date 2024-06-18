@@ -1,0 +1,231 @@
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 200px;
+  margin: 10px 0 10px 0;
+}
+
+.sidebar ul {
+  margin: 0px;
+  padding: 0 10px 0 10px;
+}
+
+.sidebar li {
+  display: block;
+  margin: 0px 0px 5px 0px;
+  padding: 5px 5px 5px 5px;
+  border-right: solid 4px #ffa41b;
+  background-color: #fff2d5;
+}
+
+.sidebar a {
+  color: #444444;
+  text-decoration: none;
+}
+
+.side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
+#top {
+  position: fixed;
+  right: 40px;
+  bottom: 10px;
+  padding: 10px 10px 10px 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #ffd154;
+  font-family: sans-serif;
+  font-size: 25px;
+  color: #000000;
+  text-decoration: none;
+  background: url(./../picture/ika_icon.png);
+  background-size: cover;
+
+}
+
+.content {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  display: block;
+}
+
+img.buki {
+  width: 430px;
+  height: 243px;
+}
+
+video.buki {
+  width: 430px;
+  height: 243px;
+}
+
+h1 {
+  font-size: 49px;
+  text-align: center;
+  border-bottom: double 4px #444444;
+
+}
+
+h2 {
+  font-size: 36px;
+  padding: 10px 10px 10px 10px;
+  width: 500px;
+  border-bottom: solid 4px #444444;
+
+}
+
+h3 {
+  font-size: 25px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: url("./../picture/spla_haikei1.png") no-repeat, url("./../picture/spla_haikei2.png") no-repeat, url("./../picture/spla_haikei4.png") no-repeat, url("./../picture/spla_haikei5.png") no-repeat, url("./../picture/spla_haikei3.png");
+  background-size: 1500px 826px;
+  background-position-y: 0px, 826px, 1652px, 5782px;
+
+}
+
+p {
+  font-size: 17px;
+  background-color: #ffffff;
+}
+
+h5 {
+  width: 200px;
+  font-size: 22px;
+  border-bottom: double 4px #444444;
+}
+
+.matomari1 {
+  border: solid 7px #3af9e9;
+  margin-bottom: 40px;
+}
+
+.matomari2 {
+  border: solid 7px #59fe7a;
+  margin-top: 15px;
+}
+
+#spla1png {
+  width: 279px;
+  height: 399px;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+#spla2png {
+  width: 246px;
+  height: 399px;
+  margin-right: 50px;
+}
+
+#spla3png {
+  width: 246px;
+  height: 399px;
+}
+
+iframe {
+  background-color: aqua;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#usirosiroku1 {
+  padding-top: 0px;
+  margin: 50px 0px 20px 0px;
+  width: 900px;
+  font-size: 18px;
+}
+
+#usirosiroku2 {
+  width: 900px;
+}
+
+#usirosiroku3 {
+  width: 480px;
+}
+
+#usirosiroku4 {
+  width: 450px;
+}
+
+#usirosiroku5 {
+  width: 590px;
+}
+
+#usirosiroku6 {
+  width: 560px;
+}
+
+#usirosiroku7 {
+  width: 560px;
+}
+
+#usirosiroku8 {
+  width: 560px;
+}
+
+#usirosiroku9 {
+  width: 590px;
+}
+
+#usirosiroku10 {
+  width: 560px;
+}
+
+#usirosiroku11 {
+  width: 800px;
+}
+
+#usirosiroku12 {
+  width: 560px;
+}
+
+
+
+#menu {
+  padding: 0;
+}
+
+#menu>li {
+  display: inline-block;
+  margin: 0px 0px 5px 0px;
+  padding: 5px 5px 5px 5px;
+  min-width: 100px;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+  background-color: #fff2d5;
+
+}
+
+#menu a {
+  color: #444444;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back {
+  background-color: #6c757d;
+  padding: 0px 20px 0px 20px;
+}
+
+.txt {
+  background-color: white;
+}

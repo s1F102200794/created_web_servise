@@ -1,0 +1,129 @@
+.map {
+  background-image: url(../img/Chugoku.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+}
+
+.Tottori {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 90px;
+  left: 450px;
+}
+
+.Okayama {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 350px;
+  left: 500px;
+}
+
+.Shimane {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 0px;
+  left: 150px;
+}
+
+.Hiroshima {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 190px;
+  left: 250px;
+}
+
+.Yamaguchi {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -120px;
+  left: 30px;
+}
+
+@media (max-width: 576px) {
+  .map {
+    background-image: url(../img/Chugoku.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 400px;
+  }
+  .Tottori {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 90px;
+    left: 300px;
+  }
+  
+  .Okayama {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 250px;
+    left: 300px;
+  }
+  
+  .Shimane {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 0px;
+    left: 150px;
+  }
+  
+  .Hiroshima {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 160px;
+    left: 200px;
+  }
+  
+  .Yamaguchi {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -10px;
+    left: 30px;
+  }
+}
+/*
+.Tottori:hover {
+  background-color: #b6b6b6;
+}
+
+.Okayama:hover {
+  background-color: #b6b6b6;
+}
+
+.Shimane:hover {
+  background-color: #b6b6b6;
+}
+
+.Hiroshima:hover {
+  background-color: #b6b6b6;
+}
+
+.Yamaguchi:hover {
+  background-color: #b6b6b6;
+}
+*/

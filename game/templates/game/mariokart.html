@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>マリオカートの紹介</title>
+  <link rel="stylesheet" href="{% static 'game/css/mariokart.css'%}">
+  <link rel="icon" type="image/x-icon" href="{% static 'game/picture/favicon.png' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  {% include "intern/header.html" %}
+  <div class="back">
+    <div class="txt">
+      <a href="#" id="toppo">↑ Top</a>
+
+      <ul id="menu">
+        <li><a href="{% url 'game:index' %}">ホーム</a></li>
+        <li><a href="{% url 'game:splatoon' %}">スプラトゥーン</a></li>
+        <li><a href="{% url 'game:lol' %}">リーグオブレジェンド</a></li>
+      </ul>
+
+      <div id="container">
+        <div class="side">
+          <aside class="sidebar">
+            <div class="sticky">
+              <ul>
+                <li><a href="#id1">内容</a></li>
+                <li><a href="#id5">メインアイテム一覧</a></li>
+                <li><a href="#id2">特徴</a></li>
+                <li><a href="#id3">魅力</a></li>
+                <li><a href="#id4">公式ホームページ</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <div class="content">
+
+
+          <h1>マリオカートの紹介</h1>
+          <h2 id="id1">内容</h2>
+          <p>
+            <div class="youtube">
+              <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HljJvwifETg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="video_title"><a href="" style="text-decoration:none;">「マリオカート8デラックス」</a></div>
+
+              </div>
+
+              <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1V6XecP27wE"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="video_title"><a href="" style="text-decoration:none;">「マリオカートツアー」</a></div>
+
+              </div>
+
+              <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VKAJcwYVEvY"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="video_title"><a href="" style="text-decoration:none;">「マリオカートアーケードグランプリデラックス」</a></div>
+              </div>
+            </div>
+            <br><br>
+
+            マリオカートは任天堂から発売されたゲームで1992年にスーパーファミコンで初めて発売され、世界で876万本売れている。<br>
+            また、家庭用ゲーム機で9作品出ており、他にもスマートフォン向けアプリ、アーケードゲームなど数多くのデバイスで遊べるようになっている。<br>
+            名前からも想像できるように、アイテムを駆使して12人のプレイヤーと戦うレーシングゲームであり、キャラクターはマリオシリーズをはじめ、任天堂の様々なシリーズキャラクターから出演していて、キャラクターによって軽量級、中量級、重量級と分かれており、初心者には軽量級、上級者には重量級が向いている。<br>
+            マリオカート7からはマシンをタイヤ、ボディ、グライダーの3つを好きなように組み合わせることが可能になり、自分の好きな見た目のカスタムにするもよし、加速重視にするもよしとなっている。<br>
+          </p>
+
+          <h2 id="id5">メインアイテム一覧</h2>
+          <table>
+            <tr>
+              <th>
+                アイテム
+              </th>
+              <th>
+                効果
+              </th>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/banana.png'%}" alt="バナナ" width="50" height="50">
+              </td>
+              <td>
+                バナナ<br>
+                踏んだカートをクラッシュさせることが出来る。
+                また、後ろに装備しておくと後ろからの攻撃を防御できる。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/koura.png'%}" alt="こうら" width="50" height="50">
+              </td>
+              <td>
+                こうら<br>
+                緑と赤の2色あり、緑はまっすぐ進み、赤は前の敵を追跡してくれる。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/blue_coura.png'%}" alt="青こうら" width="50" height="50">
+              </td>
+              <td>
+                青こうら<br>
+                1位の相手に向かって追跡して攻撃する。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/bom.png'%}" alt="ボムへい" width="50" height="50">
+              </td>
+              <td>
+                ボムへい<br>
+                投げるとある程度の範囲を爆発させられる。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/kinoko.png'%}" alt="きのこ" width="50" height="50">
+              </td>
+              <td>
+                きのこ<br>
+                カートがダッシュする
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/star.png'%}" alt="スター" width="50" height="50">
+              </td>
+              <td>
+                スター<br>
+                一定時間無敵状態になり、速度が上がる。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/kira.png'%}" alt="キラー" width="50" height="50">
+              </td>
+              <td>
+                キラー<br>
+                自動操縦に切り替わり、無敵状態のまま道なりを進んでくれる。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/sannda.png'%}" alt="サンダー" width="50" height="50">
+              </td>
+              <td>
+                サンダー<br>
+                前方の相手をクラッシュさせ、相手は小さくなり速度が一定時間遅くなる。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{% static 'game/picture/koin.png'%}" alt="コイン" width="50" height="50">
+              </td>
+              <td>
+                コイン<br>
+                1枚当たり1%の速度が上がるコインを2枚ゲットできる。
+              </td>
+            </tr>
+
+
+            </tr>
+          </table>
+
+          <h2 id="id2">特徴</h2>
+          <img src="{% static 'game/picture/ballon.png'%}" alt="風船バトル" width="280" height="170">
+          <img src="{% static 'game/picture/coin_game.png'%}" alt="あつめてコイン" width="280" height="170">
+          <img src="{% static 'game/picture/pakkun.jpg'%}" alt="パックンVSスパイ" width="280" height="170">
+          <img src="{% static 'game/picture/bom_game.png'%}" alt="ドッカン！ボムへい" width="280" height="170">
+          <img src="{% static 'game/picture/shain.png'%}" alt="いただきシャイン" width="280" height="170">
+          <p>
+            速さを競うだけのレーシングゲームではなく、アイテムを駆使して相手を引きずり落としたり、引きずり落とされたりとどんでん返しが可能なレーシングゲームとなっている。<br>
+            また、コースによっては、壁を走ったり水中を走ったり空中を滑空したりすることが可能になっている。<br>
+            そしてレースだけだと思われがちだが、マリオカート8デラックスには<br>
+            ・自分の風船を守りながらライバルの風船を割る<a
+              href="https://www.youtube.com/watch?v=Tf99EgWsTT4&feature=emb_logo">マリオカート８デラックス</a><br>
+            ・コース場内に散らばっているコインを集め、そのコインの合計数を競う<a href="https://www.youtube.com/watch?v=uQqJdEWzykw">あつめてコイン</a><br>
+            ・鬼側の陣営と逃げる側の陣営の2つに分かれて戦う<a href="https://www.youtube.com/watch?v=4ocWxEXHqS8">パックンVSスパイ</a><br>
+            ・アイテムボックスから出るアイテムはすべてボム兵で、相手の風船を割る<a
+              href="https://www.youtube.com/watch?v=w2B6iZE_J4g&feature=emb_logo">ドッカン！ボムへい</a><br>
+            ・レース場内に一つしかないシャイン呼ばれるスターを２０カウントの間持ち続けると勝ちになる<a
+              href="https://www.youtube.com/watch?v=thYizsHigiY&feature=emb_logo">いただきシャイン</a><br>
+            <p>などがある。</p>
+
+          </p><br>
+
+          <h2 id="id3">魅力</h2>
+          <p>
+            マリオカートには様々なアイテムがあり、攻撃（防御）アイテム、加速アイテム、無敵アイテムがあり、アイテムを使うタイミングなどの戦略がある。<br>
+
+            <ol>
+              <li>前張り<br>
+
+                自分がずっと一位に位置し、独走する戦略<br>
+                ただし1位の人に当たる青甲羅や、後ろの人たちからの妨害から逃げ続けなければならない為、結局最終ラップなどでやられてしまうことが多い。<br>
+              </li><br>
+              <li>２位待ち
+                <br>
+                １位にはならず、２位でキープしたまま最終ラップで１位になる戦略<br>
+                一位からの妨害からもよけ続け、２位未満の人たちからの妨害もよけ続けなければならないため、難しい。
+                <br>
+              </li><br>
+              <li>打開
+                <br>
+                最初は下位に位置し、良いアイテムを引いて最終ラップに一位になる戦略<br>
+                マリオカートのアイテムは１位から離れるほど良いアイテムが出るというシステムを突き、わざと下位になりアイテムを駆使して上位になる方法だが、技術が必要かつ、最下位になる可能性も高い戦略である。
+                <br>
+              </li>
+            </ol>
+          </p>
+          <p>このように上級者向けではあるが、戦略があり、素人から玄人まで楽しめるゲームとなっている。</p>
+
+          <h2 id="id4">公式ホームページ</h2>
+          <ul>
+            <li>任天堂switch <a href="https://www.nintendo.co.jp/switch/aabpa/index.html">マリオカート８デラックス</a></li>
+            <li>任天堂 <a href="https://mariokarttour.com/ja-JP">マリオカートツアー</a></li>
+            <li>任天堂、バンダイナムコ <a href="https://mariokart-acgpdx.bngames.net/">マリオカートアーケードグランプリデラックス</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

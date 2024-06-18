@@ -1,0 +1,305 @@
+.map_jap {
+  background-image: url(../img/japanese_map.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+  height: 800px;
+}
+
+
+.Sapporo {
+  background-color: #d1cfcf;
+  position: relative;
+  top: 30px;
+  left: 250px;
+  width: 73px;
+  height: 96px;
+}
+
+.Aomori {
+  background-color: #d1cfcf;
+  position: relative;
+  top: 50px;
+  left: 450px;
+  width: 73px;
+  height: 96px;
+}
+
+.Sendai {
+  background-color: #d1cfcf;
+  position: relative;
+  top: 80px;
+  left: 430px;
+  width: 73px;
+  height: 96px;
+}
+
+.Niigata {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -100px;
+  left: 260px;
+  width: 73px;
+  height: 96px;
+}
+
+.Tokyo {
+  background-color: #d1cfcf;
+  position: relative;
+  top: 0px;
+  left: 410px;
+  width: 73px;
+  height: 96px;
+}
+
+.Kanazawa {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -250px;
+  left: 160px;
+  width: 73px;
+  height: 96px;
+}
+
+.Nagoya {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -100px;
+  left: 280px;
+  width: 73px;
+  height: 96px;
+}
+
+.Osaka {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -180px;
+  left: 185px;
+  width: 73px;
+  height: 96px;
+}
+
+.Tokushima {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -250px;
+  left: 100px;
+  width: 73px;
+  height: 96px;
+}
+
+.Hiroshima {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -600px;
+  left: 80px;
+  width: 73px;
+  height: 96px;
+}
+
+.Hukuoka {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -630px;
+  left: 0px;
+  width: 73px;
+  height: 96px;
+}
+
+.Kagoshima {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -470px;
+  left: 0px;
+  width: 73px;
+  height: 96px;
+}
+
+.Naha {
+  background-color: #d1cfcf;
+  position: relative;
+  top: -575px;
+  left: 380px;
+  width: 73px;
+  height: 96px;
+}
+
+
+@media (max-width: 576px) {
+  .map_jap {
+    background-image: url(../img/japanese_map.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 400px;
+    height: 500px;
+  }
+  
+  .Sapporo {
+    background-color: #d1cfcf;
+    position: relative;
+    top: 30px;
+    left: 200px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Aomori {
+    background-color: #d1cfcf;
+    position: relative;
+    top: 60px;
+    left: 285px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Sendai {
+    background-color: #d1cfcf;
+    position: relative;
+    top: 75px;
+    left: 280px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Niigata {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -10px;
+    left: 170px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Tokyo {
+    background-color: #d1cfcf;
+    position: relative;
+    top: 80px;
+    left: 230px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Kanazawa {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -70px;
+    left: 120px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Nagoya {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -20px;
+    left: 180px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Osaka {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -50px;
+    left: 135px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Tokushima {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -100px;
+    left: 90px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Hiroshima {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -280px;
+    left: 65px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Hukuoka {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -300px;
+    left: 10px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Kagoshima {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -200px;
+    left: 10px;
+    width: 40px;
+    height: 55px;
+  }
+  
+  .Naha {
+    background-color: #d1cfcf;
+    position: relative;
+    top: -380px;
+    left: 280px;
+    width: 40px;
+    height: 55px;
+  }
+}
+
+.Sapporo:hover {
+  background-color: #b6b6b6;
+}
+
+.Aomori:hover {
+  background-color: #b6b6b6;
+}
+
+.Sendai:hover {
+  background-color: #b6b6b6;
+}
+
+.Niigata:hover {
+  background-color: #b6b6b6;
+}
+
+.Tokyo:hover {
+  background-color: #b6b6b6;
+}
+
+.Kanazawa:hover {
+  background-color: #b6b6b6;
+}
+
+.Nagoya:hover {
+  background-color: #b6b6b6;
+}
+
+.Osaka:hover {
+  background-color: #b6b6b6;
+}
+
+.Tokushima:hover {
+  background-color: #b6b6b6;
+}
+
+.Hiroshima:hover {
+  background-color: #b6b6b6;
+}
+
+.Hukuoka:hover {
+  background-color: #b6b6b6;
+}
+
+.Kagoshima:hover {
+  background-color: #b6b6b6;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>自分たちの好きなもの紹介サイト.spla</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'game/css/splatoon.css'%}">
+  <link rel="icon" type="image/x-icon" href="{% static 'game/picture/favicon.png' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  {% include "intern/header.html" %}
+  <div class="back">
+    <div class="txt">
+      <ul id="menu">
+        <li><a href="{% url 'game:index' %}">ホーム</a></li>
+        <li><a href="{% url 'game:lol' %}">リーグオブレジェンド</a></li>
+        <li><a href="{% url 'game:mariokart' %}">マリオカート</a></li>
+      </ul>
+      <h1>splatoonの紹介</h1>
+      <a href="#" id="top">　　Top</a>
+      <div id="container">
+        <div class="side">
+          <aside class="sidebar">
+            <div class="sticky">
+              <ul>
+                <li><a href="#spla1">splatoonってどんなゲーム？</a></li>
+                <li><a href="#spla2">splatoonの魅力</a></li>
+                <li><a href="#spla3">ブキ</a></li>
+                <li><a href="#spla4">リアルイベントも！</a></li>
+                <li><a href="#spla5">公式ホームページはこちら</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+        <div class="content">
+          <div class="matomari1">
+            <h2 id="spla1">splatoonってどんなゲーム？</h2>
+            <h3>インクを撃って塗りあって、ナワバリを広げあう対戦ゲーム</h3>
+
+            <p>
+              splatoonシリーズは任天堂から発売されている新感覚のシューティングゲームである。<br>ヒト状態になってインクを撃ちあい、イカ状態になってインクに潜ってインクを回復したり素早く動いたりできる！<br><br>↓　splatoon3のプレイ映像はこちら
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sdI6COLDMEo" frameborder="0"
+              allowfullscreen></iframe>
+            <p id="usirosiroku1">2015年にsplatoon1, 2017年にsplatoon2 が発売されている。2022年9月9日にsplatoon3発売予定‼</p>
+            <img id="spla1png" src="{% static 'game/picture/spla1.png'%}">
+            <img id="spla2png" src="{% static 'game/picture/spla2.png'%}">
+            <img id="spla3png" src="{% static 'game/picture/spla3.png'%}">
+          </div>
+
+          <div class="matomari1">
+            <h2 id="spla2">splatoonの魅力</h2>
+            <h3>ジャイロ操作が可能なシューティングゲーム</h3>
+            <p>splatoonは他のシューティングゲームにはない特徴として高精度なジャイロ操作が可能という点である。</p>
+            <p>ジャイロ操作が可能なゲームはモンハン、APEXなど有名なゲームもあるが、それと比べても、splatoonのジャイロ操作の方が優秀である。</p>
+            <p id="usirosiroku4">高精度なジャイロによってゲームへの没入感が増す！</p>
+
+            <h3>様々なブキ・ステージがある！</h3>
+            <h5 id="spla3">ブキ</h5>
+            <p id="usirosiroku2">splatoonには様々なブキがあり、ブキごとに長所短所が違うため様々な戦い方ができる。</p>
+            <div class="matomari2">
+              <h5>シューター</h5>
+              <p id="usirosiroku3">splatoonで最も基本的なブキ種であり、水鉄砲がモチーフ。</p>
+              <img class="buki" src="{% static 'game/picture/sushi.png'%}">
+              <video class="buki" controls src="{% static 'game/video/sushi.mp4'%}"></video>
+              <p id="usirosiroku8">インクが切れるまで連続して撃ち続けることができる<br>splatoonでもっとも基本的なブキ</p>
+            </div>
+            <div class="matomari2">
+              <h5>チャージャー</h5>
+              <p id="usirosiroku5">インクをチャージして攻撃力・射程を上げて、一度に放つブキ種である。</p>
+              <img src="{% static 'game/picture/tya-.png'%}" class="buki">
+              <video class="buki" controls src="{% static 'game/video/tya-.mp4'%}"></video>
+              <p>相手を射程外から一発で撃ち抜けるのが特徴</p>
+            </div>
+            <div class="matomari2">
+              <h5>スピナー</h5>
+              <p>インクをチャージして弾を連射するブキ種である。</p>
+              <img class="buki" src="{% static 'game/picture/supina-.png'%}">
+              <video class="buki" controls src="{% static 'game/video/supina-.mp4'%}"></video>
+              <p id="usirosiroku10">他のブキより足が早く、素早く歩きながら弾を連射できるのが特徴</p>
+            </div>
+            <div class="matomari2">
+              <h5>ローラー</h5>
+              <p>他のゲームでは見ない、塗るゲームだからこそのブキ種であり、モチーフはローラー？</p>
+              <img class="buki" src="{% static 'game/picture/ro-ra-.png'%}">
+              <video class="buki" controls src="{% static 'game/video/ro-ra-.mp4'%}"></video>
+              <p>転がして地面を塗ったり、一気に振り下ろすことでインクを前方に飛ばすことができるのが特徴</p>
+            </div>
+
+            <div class="matomari2">
+              <h5>スロッシャー</h5>
+              <p id="usirosiroku6">こちらも塗るゲームだからこそのブキ種であり、モチーフはバケツ。</p>
+              <img class="buki" src="{% static 'game/picture/baketu.png'%}">
+              <video class="buki" controls src="{% static 'game/video/baketu.mp4'%}"></video>
+              <p>インクを一度に大量に放つことができ、段差があってもインクを飛ばせるのが特徴</p>
+            </div>
+
+            <div class="matomari2">
+              <h5>マニューバ</h5>
+              <p>splatoon2から登場したブキ種であり、二丁拳銃がモチーフ。</p>
+              <img class="buki" src="{% static 'game/picture/manyu.png'%}">
+              <video class="buki" controls src="{% static 'game/video/manyu.mp4'%}"></video>
+              <p id="usirosiroku7">スライドという一定距離を一気に高速移動できるのが特徴</p>
+            </div>
+            <div class="matomari2">
+              <h5>シェルター</h5>
+              <p id="usirosiroku9">マニューバと同じくsplatoon2から登場したブキ種であり、傘がモチーフ。</p>
+              <img class="buki" src="{% static 'game/picture/kasa.png'%}">
+              <video class="buki" controls src="{% static 'game/video/kasa.mp4'%}"></video>
+              <p>splatoonで唯一メインで相手の攻撃を防ぐことができるのが特徴</p>
+            </div>
+            <div class="matomari2">
+              <h5>他にも色々なブキがある！</h5>
+              <p id="usirosiroku11">筆をモチーフにしたブキ、ブラスターと言われるインクが弾けるブキなど他にも色々ある！</p>
+              <p id="usirosiroku12">デザインにも遊び心があって親しみやすい！</p>
+            </div>
+          </div>
+          <div class="matomari1">
+            <h2 id="spla4">リアルイベントも！</h2>
+            <p>
+              splatoonでは年に一回スプラトゥーン甲子園というものが開催されていた。（コロナ禍前）<br>現地でしか味わえない熱狂やハラハラ感が味わえる！<br><br>↓　前回のオフライン開催でのsplatoon甲子園の決勝トーナメントはこちら
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7eJZsl_a_68" frameborder="0"
+              allowfullscreen></iframe>
+            <p>splatoon3でも開催が期待されている。</p>
+          </div>
+          <div class="matomari1">
+            <h3 id="spla5">公式ホームページ</h3>
+            <p>splatoon3に向けて色々な情報が随時更新されている！</p>
+            <p>splatoon3の公式サイトはこちら<a
+                href="https://www.nintendo.co.jp/switch/av5ja/index.html">https://www.nintendo.co.jp/switch/av5ja/index.html</a>
+            </p>
+            <p>splatoon3の公式Twitter(ブキ画像引用元)はこちら<a
+                href="https://twitter.com/splatoonjp/?lang=ja">https://twitter.com/splatoonjp/?lang=ja</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

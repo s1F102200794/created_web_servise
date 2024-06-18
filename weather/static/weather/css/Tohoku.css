@@ -1,0 +1,152 @@
+.map {
+  background-image: url(../img/Tohoku.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+}
+
+.Aomori {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 420px;
+}
+
+.Iwate {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 100px;
+  left: 470px;
+}
+
+.Akita {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -10px;
+  left: 100px;
+}
+
+.Yamagata {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 100px;
+}
+
+.Miyagi {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 0px;
+  left: 400px;
+}
+
+.Hukushima {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 0px;
+  left: 70px;
+}
+
+@media (max-width: 576px) {
+  .map {
+    background-image: url(../img/Tohoku.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 400px;
+  }
+  .Aomori {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 30px;
+    left: 280px;
+  }
+  
+  .Iwate {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 80px;
+    left: 300px;
+  }
+  
+  .Akita {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 0px;
+    left: 80px;
+  }
+  
+  .Yamagata {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 30px;
+    left: 100px;
+  }
+  
+  .Miyagi {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 15px;
+    left: 290px;
+  }
+  
+  .Hukushima {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 20px;
+    left: 70px;
+  }
+}
+
+/*
+.Aomori:hover {
+  background-color: #b6b6b6;
+}
+
+.Iwate:hover {
+  background-color: #b6b6b6;
+}
+
+.Akita:hover {
+  background-color: #b6b6b6;
+}
+
+.Yamagata:hover {
+  background-color: #b6b6b6;
+}
+
+.Miyagi:hover {
+  background-color: #b6b6b6;
+}
+
+.Hukushima:hover {
+  background-color: #b6b6b6;
+}
+*/

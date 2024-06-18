@@ -1,0 +1,175 @@
+.map {
+  background-image: url(../img/Kanto.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+}
+
+.Ibaraki {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 60px;
+  left: 300px;
+}
+
+.Tochigi {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 520px;
+}
+
+.Gunma {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -50px;
+  left: 0px;
+}
+
+.Saitama {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 0px;
+}
+
+.Tokyo {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 0px;
+  left: 90px;
+}
+
+.Kanagawa {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+
+.Chiba {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -50px;
+  left: 480px;
+}
+
+
+@media (max-width: 576px) {
+  .map {
+    background-image: url(../img/Kanto.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 350px;
+  }
+  .Ibaraki {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 50px;
+    left: 170px;
+  }
+  
+  .Tochigi {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 30px;
+    left: 320px;
+  }
+  
+  .Gunma {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -50px;
+    left: 0px;
+  }
+  
+  .Saitama {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 30px;
+    left: 0px;
+  }
+  
+  .Tokyo {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 0px;
+    left: 50px;
+  }
+  
+  .Kanagawa {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 10px;
+    left: 50px;
+  }
+  
+  .Chiba {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -50px;
+    left: 280px;
+
+  }
+}
+/*
+.Ibaraki:hover {
+  background-color: #b6b6b6;
+}
+
+.Tochigi:hover {
+  background-color: #b6b6b6;
+}
+
+.Gunma:hover {
+  background-color: #b6b6b6;
+}
+
+.Saitama:hover {
+  background-color: #b6b6b6;
+}
+
+.Tokyo:hover {
+  background-color: #b6b6b6;
+}
+
+.Kanagawa:hover {
+  background-color: #b6b6b6;
+}
+
+.Chiba:hover {
+  background-color: #b6b6b6;
+}
+*/

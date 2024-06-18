@@ -1,0 +1,173 @@
+.map {
+  background-image: url(../img/Kinki.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 600px;
+  background-color: rgb(93, 93, 209);
+  border: 3px solid;
+}
+
+.Shiga {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 30px;
+  left: 500px;
+}
+
+.Mie {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 120px;
+  left: 530px;
+}
+
+.Kyoto {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -190px;
+  left: 280px;
+}
+
+.Nara {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: 150px;
+  left: 450px;
+}
+
+.Hyogo {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -80px;
+  left: 0px;
+}
+
+.Osaka {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -150px;
+  left: 100px;
+}
+
+.Wakayama {
+  background-color: #d1cfcf;
+  width: 73px;
+  height: 96px;
+  position: relative;
+  top: -30px;
+  left: 130px;
+}
+
+@media (max-width: 576px) {
+  .map {
+    background-image: url(../img/Kinki.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-color: rgb(93, 93, 209);
+    border: 3px solid;
+    background-size: 400px;
+  }
+  .Shiga {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 30px;
+    left: 350px;
+  }
+  
+  .Mie {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 100px;
+    left: 380px;
+  }
+  
+  .Kyoto {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -107px;
+    left: 200px;
+  }
+  
+  .Nara {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 120px;
+    left: 320px;
+  }
+  
+  .Hyogo {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -50px;
+    left: 0px;
+  }
+  
+  .Osaka {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: -70px;
+    left: 80px;
+  }
+  
+  .Wakayama {
+    background-color: #d1cfcf;
+    width: 40px;
+    height: 55px;
+    position: relative;
+    top: 0px;
+    left: 90px;
+  }
+}
+/*
+.Shiga:hover {
+  background-color: #b6b6b6;
+}
+
+.Mie:hover {
+  background-color: #b6b6b6;
+}
+
+.Kyoto:hover {
+  background-color: #b6b6b6;
+}
+
+.Nara:hover {
+  background-color: #b6b6b6;
+}
+
+.Hyogo:hover {
+  background-color: #b6b6b6;
+}
+
+.Osaka:hover {
+  background-color: #b6b6b6;
+}
+
+.Wakayama:hover {
+  background-color: #b6b6b6;
+}
+*/
