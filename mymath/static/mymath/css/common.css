@@ -67,3 +67,18 @@ p {
   background-color: white;
   padding: 20px;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+}
+
+.ans {
+  margin-right: auto;
+}
+
+.openai_logo_right {
+  display: flex;
+  align-items: center;
+}

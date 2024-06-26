@@ -179,7 +179,10 @@
               <p>{{ chat_results }}</p>
               <hr>
               <p>ChatGPTの読み込みに時間がかかります。この機能が不要な場合は以下のボタンから元のページに戻ってください。</p>
-              <a href="{% url 'weather:Chubu' %}" class="btn btn-danger">移動</a>
+              <div class="gpt">  
+                <a href="{% url 'weather:Chubu' %}" class="btn btn-danger">移動</a>
+                {% include "chatGPT/GPT_logo.html" %}
+              </div>
             </div>
           </div>
         </div>

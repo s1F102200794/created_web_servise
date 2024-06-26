@@ -149,3 +149,20 @@
 .txt {
   background-color: white;
 }
+
+.gpt {
+  display: flex;
+  justify-content: space-between; /* 子要素を左右に配置 */
+  align-items: center; /* 子要素を縦方向の中央に揃える */
+  padding: 0; /* パディングを0に設定 */
+}
+
+.btn {
+  flex-shrink: 0; /* ボタンのサイズを維持 */
+}
+
+.openai_logo_right {
+  display: flex;
+  justify-content: flex-end; /* 右に寄せる */
+  align-items: center; /* 子要素を縦方向の中央に揃える */
+}

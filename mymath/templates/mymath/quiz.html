@@ -70,7 +70,12 @@
                         </p>
                     </div>
                 </fieldset>
-                <button type="submit" class="ans">回答する</button>
+                <div class="container">
+                    <button type="submit" class="ans">回答する</button>
+                    <div class="openai_logo_right">
+                      <img src="{% static 'mymath/powered_by_openai.svg' %}" class="openai_logo" width="130" alt="ロゴ">
+                    </div>
+                  </div>                  
             </form>
 
             {% if height_result %}
