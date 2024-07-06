@@ -1,3 +1,32 @@
 .html {
   background-color: aqua;
 }
+
+.slide-container {
+  position: relative;
+  text-align: center;
+  width: 70%;
+  height: 0;
+  padding-top: 39.375%;
+  padding-bottom: 0;
+  box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
+  margin: 1.6em auto 0.9em auto;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+}
+
+.slide-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right {
+  text-align: right;
+}
