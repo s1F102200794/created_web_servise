@@ -21,7 +21,6 @@
     </style>
 </head>
 <body class="bg-light">
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -55,6 +54,10 @@
                             </div>
                         {% endfor %}
                         <input type="hidden" name="next" value="{{ next }}">
+                        問い合わせは<a href="{% url 'accounts:contact_form' %}">こちら</a>から<br><br>
+                        <p style="text-align: center;" ><strong>メンテナンス情報</strong></p>
+                        <p>7月13日(土)~7月14日(日)は生成系AIの機能が使用が出来なくなります。<br>したがって、天気予報アプリの移動ボタンを押した先の解説が「トークンの上限に達してしまいました。24時間後に回復しますので、そのあとに試してみてください。」となり、算数の問題は回答するボタンを押すと同じくエラーメッセージが出る可能性があります。</p>
+                        
                         <button type="submit" class="btn btn-warning w-100">ログイン</button>
                     </form>
                 </div>
