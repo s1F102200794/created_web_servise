@@ -16,6 +16,11 @@ class LoginForm(AuthenticationForm):
     pass
 
 
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
+from django.conf import settings
+from django import forms
+
 class ContactForm(forms.Form):
     name = forms.CharField(
         label='',
@@ -47,15 +52,29 @@ class ContactForm(forms.Form):
         else:
             username = "Anonymous"
         
-        message = "送信者名: {name}\nメールアドレス: {email}\nお問い合わせ内容:\n{message}\n\nログインユーザー: {username}".format(
+        # 送信者へのメッセージ内容
+        user_message = "以下の内容でお問い合わせを受け付けました。\n\nお名前: {name} 様\nメールアドレス: {email}\nお問い合わせ内容:\n{message}\n\nこのメールは自動返信メールとなっておりますのでこのメールアドレスに直接連絡いただいても返信できません。ご了承ください。なお、返信は1~2日程を目安に返信いたします。".format(
+            name=self.cleaned_data['name'],
+            email=self.cleaned_data['email'],
+            message=self.cleaned_data['message']
+        )
+
+        # 管理者へのメッセージ内容
+        admin_message = "送信者名: {name} 様\nメールアドレス: {email}\nお問い合わせ内容:\n{message}\n\nログインユーザー: {username}\n".format(
             name=self.cleaned_data['name'],
             email=self.cleaned_data['email'],
             message=self.cleaned_data['message'],
             username=username
         )
+        
         from_email = settings.EMAIL_HOST_USER
         recipient_list = [settings.EMAIL_HOST_USER_RE]
+        
         try:
-            send_mail(subject, message, from_email, recipient_list)
+            # 管理者へのメール送信
+            send_mail(subject, admin_message, from_email, recipient_list)
+            
+            # 送信者へのメール送信
+            send_mail("お問い合わせありがとうございます", user_message, from_email, [self.cleaned_data['email']])
         except BadHeaderError:
             return HttpResponse("無効なヘッダが検出されました。")
