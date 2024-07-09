@@ -16,8 +16,6 @@ class LoginForm(AuthenticationForm):
     pass
 
 
-
-
 class ContactForm(forms.Form):
     name = forms.CharField(
         label='',
@@ -56,7 +54,7 @@ class ContactForm(forms.Form):
             username=username
         )
         from_email = settings.EMAIL_HOST_USER
-        recipient_list = [settings.EMAIL_HOST_USER]
+        recipient_list = [settings.EMAIL_HOST_USER_RE]
         try:
             send_mail(subject, message, from_email, recipient_list)
         except BadHeaderError:

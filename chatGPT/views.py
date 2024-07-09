@@ -85,17 +85,17 @@ def get_weather_info_5days(api_key, latitude, longitude, index):
         weather_icon = 'bi bi-cloud-sun'
     elif weather_description == '02d':
         weather_icon = 'bi bi-cloud-moon'  
-    elif weather_description == '03d' or '03n':
+    elif weather_description == '03d' or weather_description == '03n':
         weather_icon = 'bi bi-cloud'   
-    elif weather_description == '04d' or '04n':
+    elif weather_description == '04d' or weather_description == '04n':
         weather_icon = 'bi bi-clouds'
-    elif weather_description == '09d' or '09n' or '10d' or '10n':
+    elif weather_description == '09d' or weather_description == '09n' or weather_description == '10d' or weather_description == '10n':
         weather_icon = 'bi bi-cloud-rain'
-    elif weather_description == '11d' or '11n':
+    elif weather_description == '11d' or weather_description == '11n':
         weather_icon = 'bi bi-cloud-lightning'
-    elif weather_description == '13d' or '13n':
+    elif weather_description == '13d' or weather_description == '13n':
         weather_icon = 'bi bi-cloud-snow'
-    elif weather_description == '50d' or '50n':
+    elif weather_description == '50d' or weather_description == '50n':
         weather_icon = 'bi bi-cloud-haze2'
     else:  #iconが?になった場合確認する用
         weather_icon = 'bi bi-question'

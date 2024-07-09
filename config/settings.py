@@ -160,10 +160,10 @@ EMAIL_HOST_USER = os.getenv('MAIL')
 EMAIL_HOST_PASSWORD = os.getenv('APP_PASS')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
+EMAIL_HOST_USER_RE = os.getenv('MAIL_RE')
 HANDLER404 = 'chatGPT.views.rate_limit_exceeded'
 
-# ログアウトまでの時間　(秒)
+# ログアウトまでの時間 (秒)
 SESSION_COOKIE_AGE = 60 * 60 * 24
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -184,3 +184,6 @@ OPEN_WEATHER_API = os.getenv('OPEN_WEATHER_API')
 OPEN_AI_API = os.getenv('OPEN_AI_API')
 
 OPEN_AI_URL = os.getenv('OPEN_AI_URL')
+
+OPEN_AI_API_MY = os.getenv('OPEN_AI_API_MY')
+OPEN_AI_URL_MY = os.getenv('OPEN_AI_URL_MY')
