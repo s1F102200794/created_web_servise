@@ -42,15 +42,21 @@ class ContactForm(forms.Form):
         }),
     )
 
-    def send_email(self):
+    def send_email(self, user):
         subject = "お問い合わせ"
-        message = "送信者名: {name}\nメールアドレス: {email}\n\nお問い合わせ内容:\n{message}".format(
+        if user.is_authenticated:
+            username = user.username
+        else:
+            username = "Anonymous"
+        
+        message = "送信者名: {name}\nメールアドレス: {email}\nお問い合わせ内容:\n{message}\n\nログインユーザー: {username}".format(
             name=self.cleaned_data['name'],
             email=self.cleaned_data['email'],
-            message=self.cleaned_data['message']
+            message=self.cleaned_data['message'],
+            username=username
         )
-        from_email = settings.EMAIL_HOST_USER  # 送信元のメールアドレス
-        recipient_list = [settings.EMAIL_HOST_USER]  # 受信者リスト
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [settings.EMAIL_HOST_USER]
         try:
             send_mail(subject, message, from_email, recipient_list)
         except BadHeaderError:
