@@ -10,3 +10,5 @@ venv
 *.node_modules
 .env
 :Zone.Identifier
+db.sqlite3
+db-volumes

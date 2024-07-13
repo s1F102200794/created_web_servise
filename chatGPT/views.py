@@ -12,9 +12,11 @@ from django.http import HttpResponse
 base_url = 'http://api.openweathermap.org/data/2.5/forecast'
 base_url2 = 'http://api.openweathermap.org/data/2.5/weather'
 base_url_gpt = settings.OPEN_AI_URL
+base_url_gpt_my = settings.OPEN_AI_URL_MY
 
 api_key = settings.OPEN_WEATHER_API
 api_key_gpt = settings.OPEN_AI_API
+api_key_gpt_my = settings.OPEN_AI_API_MY
 
 def rate_limit_exceeded(request, exception):
     return HttpResponse("トークンの上限に達してしまいました。日を改めてトライしてください。", status=429)
@@ -145,8 +147,28 @@ def chat_GPT_response(api_key, latitude, longitude):
         return response.choices[0].message.content
     
     except openai.RateLimitError as e:
-        return ("トークンの上限に達してしまいました。24時間後に回復しますので、そのあとに試してみてください。")
+        try:
+            client = openai.OpenAI(api_key=api_key_gpt_my, base_url=base_url_gpt_my)
+            weather_data = get_weather_info_gpt(api_key, latitude, longitude)
 
+            response = client.chat.completions.create(
+                #model="gpt-3.5-turbo",
+                #model = "gpt-4-turbo",
+                model = "gpt-4o",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "日本語で応答してください。 あなたは天気予報士です。openweatherから取得したJSON形式のデータをお渡しする為、そのデータをもとにポイント解説をしてください。また、傘や日焼け止めが必要かどうかを自分で判断して教えてください。なお「わかりました」などの言葉は使わずに、解説だけを話してください。次がデータです。" + str(weather_data),
+                        #デバッグ用
+                        #'content': 'テストメッセージです。と返してください。'
+                    },
+                ],
+            )
+            return response.choices[0].message.content
+        except:
+            return ("トークンの上限に達してしまいました。24時間後に回復しますので、そのあとに試してみてください。")
+    
+    
 def chat_GPT_response_jap(api_key, latitude1, longitude1, latitude2, longitude2, latitude3, longitude3):
     try:
         client = openai.OpenAI(api_key=api_key_gpt, base_url=base_url_gpt)
@@ -168,7 +190,27 @@ def chat_GPT_response_jap(api_key, latitude1, longitude1, latitude2, longitude2,
         )
         return response.choices[0].message.content
     except openai.RateLimitError as e:
-        return ("トークンの上限に達してしまいました。24時間後に回復しますので、そのあとに試してみてください。")
+        try:
+            client = openai.OpenAI(api_key=api_key_gpt_my, base_url=base_url_gpt_my)
+            weather_data_Sap = get_weather_info_gpt(api_key, latitude = latitude1, longitude = longitude1)
+            weather_data_Tokyo = get_weather_info_gpt(api_key, latitude = latitude2, longitude = longitude2)
+            weather_data_Kago = get_weather_info_gpt(api_key, latitude = latitude3, longitude = longitude3)
+
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                #model = "gpt-4-turbo",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "日本語で応答してください。 あなたは天気予報士です。openweatherから取得したJSON形式のデータをお渡しする為、そのデータをもとにポイント解説をしてください。鹿児島のデータと東京のデータと札幌のデータを渡すので日本全体の天気予報を予測して話してください。特段、札幌や鹿児島、東京の天気の解説はいりません。また、傘や日焼け止めが必要かどうかを自分で判断して教えてください。なお「わかりました」などの言葉は使わずに、解説だけをしてください。次が鹿児島のデータです。" + str(weather_data_Sap) + "次が東京のデータです。" + str(weather_data_Tokyo) + "次が鹿児島のデータです。" + str(weather_data_Kago),
+                        #デバッグ用
+                        #'content': 'テストメッセージです。と返してください。',
+                    },
+                ],
+            )
+            return response.choices[0].message.content
+        except:
+            return ("トークンの上限に達してしまいました。24時間後に回復しますので、そのあとに試してみてください。")
 
 
 # Chat_GPT_APIを使用
