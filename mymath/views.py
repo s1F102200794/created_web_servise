@@ -54,7 +54,7 @@ def height_quiz_view(request):
 
                     client = openai.OpenAI(api_key=api_key, base_url=api_base)
                     completion = client.chat.completions.create(
-                        model="gpt-3.5-turbo",
+                        model="gpt-4o-mini",
                         #問題を出題するのは、3.5で行う
                         #model='gpt-4',
                         messages=[
@@ -94,7 +94,7 @@ def height_quiz_view(request):
                     if incorrect_question2:
                         client = openai.OpenAI(api_key=api_key, base_url=api_base)
                         completion = client.chat.completions.create(
-                            model="gpt-3.5-turbo",
+                            model="gpt-4o-mini",
                             #問題を出題するのは、3.5で行う
                             #model='gpt-4',
                             messages=[
@@ -172,7 +172,7 @@ def height_quiz_view(request):
 
                         client = openai.OpenAI(api_key=api_key_my, base_url=api_base_my)
                         completion = client.chat.completions.create(
-                            model="gpt-3.5-turbo",
+                            model="gpt-4o-mini",
                             #問題を出題するのは、3.5で行う
                             #model='gpt-4',
                             messages=[
@@ -212,7 +212,7 @@ def height_quiz_view(request):
                         if incorrect_question2:
                             client = openai.OpenAI(api_key=api_key_my, base_url=api_base_my)
                             completion = client.chat.completions.create(
-                                model="gpt-3.5-turbo",
+                                model="gpt-4o-mini",
                                 #問題を出題するのは、3.5で行う
                                 #model='gpt-4',
                                 messages=[

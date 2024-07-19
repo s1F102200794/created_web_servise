@@ -177,7 +177,7 @@ def chat_GPT_response_jap(api_key, latitude1, longitude1, latitude2, longitude2,
         weather_data_Kago = get_weather_info_gpt(api_key, latitude = latitude3, longitude = longitude3)
 
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             #model = "gpt-4-turbo",
             messages=[
                 {
@@ -197,7 +197,7 @@ def chat_GPT_response_jap(api_key, latitude1, longitude1, latitude2, longitude2,
             weather_data_Kago = get_weather_info_gpt(api_key, latitude = latitude3, longitude = longitude3)
 
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 #model = "gpt-4-turbo",
                 messages=[
                     {
