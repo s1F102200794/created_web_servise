@@ -36,3 +36,5 @@ dj-database-url
 pytz
 python-dotenv
 django-axes
+
+dj-database-url

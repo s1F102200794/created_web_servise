@@ -1,24 +1,14 @@
-databases:
-  - name: weather-db
-    plan: free
-    databaseName: weather
-    user: weather
-
 services:
   - type: web
     name: Toyo_University_YM_iniad_7GxwNLu9C4g7wriM
     env: python
-    plan: Starter
-    branch: master
+    plan: free
+    branch: azure
     buildCommand: "./build.sh"
     startCommand: "gunicorn config.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
         value: 3.8.2
-      - key: DATABASE_URL
-        fromDatabase:
-          name: weather-db
-          property: connectionString
       - key: SECRET_KEY
         generateValue: true
       - key: DJANGO_SETTINGS_MODULE
