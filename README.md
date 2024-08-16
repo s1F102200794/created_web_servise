@@ -12,6 +12,7 @@
   <img src="https://img.shields.io/badge/-Google Cloud-4285F4.svg?logo=google-cloud&style=plastic&logoColor=ffffff">
   <img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=plastic">
   <img src="https://img.shields.io/badge/-Render-000000.svg?logo=render&style=plastic">
+  <img src="https://img.shields.io/badge/-Azure-4179AF.svg?logo=Azure&style=plastic">
 </div>
 
 
@@ -27,18 +28,19 @@
 - OPEN_AI_URL_MY  
   それぞれのOpenAI APIのURLとAPIのキーです。複数あるのは、一つのAPIが使えなくなった際に、もう一つのAPIが使用できるようにするためです。
 - SECRET_KEY_DJANGO  
-  隠す必要があるのかがよくわからなかったが、secretとなっているため環境変数へ入れました。
+  隠す必要があるのかがわからなかったが、secretとなっているため環境変数へ入れました。
 - APP_PASS  
-  送信元のアプリパスワード　(詳しくは<a href="https://support.google.com/accounts/answer/185833?hl=ja">こちら</a>から)
+  送信元のアプリパスワード (詳しくは<a href="https://support.google.com/accounts/answer/185833?hl=ja">こちら</a>から)
 - MAIL_RE  
   送信する先の自分のメールアドレス
 - MAIL  
   送信元のメールアドレス
+- DATABASE_URL
+  azureのデータベースにアクセスするもの
   
  
 <hr>
 
 大学で作成したwebサイトの一部を公開しております。ポートフォリオにはあるが公開していないものに関しては現時点では公開する予定がありません。
 興味がある場合は、連絡いただければ公開するかもしれません。<br>
-なお、7月下旬には非公開にする可能性があります。
-
+なお、8月下旬には非公開にする可能性があります。
