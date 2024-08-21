@@ -42,17 +42,17 @@ def get_weather_info(api_key, latitude, longitude):
         weather_icon = 'bi bi-cloud-sun'
     elif weather_description == '02n':
         weather_icon = 'bi bi-cloud-moon'  
-    elif weather_description == '03d' or '03n':
+    elif weather_description == '03d' or  weather_description == '03n':
         weather_icon = 'bi bi-cloud'   
-    elif weather_description == '04d' or '04n':
+    elif weather_description == '04d' or weather_description == '04n':
         weather_icon = 'bi bi-clouds'
-    elif weather_description == '09d' or '09n' or '10d' or '10n':
+    elif weather_description == '09d' or weather_description == '09n' or weather_description == '10d' or weather_description == '10n':
         weather_icon = 'bi bi-cloud-rain'
-    elif weather_description == '11d' or '11n':
+    elif weather_description == '11d' or weather_description == '11n':
         weather_icon = 'bi bi-cloud-lightning'
-    elif weather_description == '13d' or '13n':
+    elif weather_description == '13d' or weather_description == '13n':
         weather_icon = 'bi bi-cloud-snow'
-    elif weather_description == '50d' or '50n':
+    elif weather_description == '50d' or weather_description == '50n':
         weather_icon = 'bi bi-cloud-haze2'
     else:  #iconが上記以外になった場合用
         weather_icon = 'bi bi-question'
@@ -67,51 +67,6 @@ def get_weather_info(api_key, latitude, longitude):
 
     return weather_info
 
-def get_weather_info_5days(api_key, latitude, longitude, index):
-    params = {
-        'lat': latitude,
-        'lon': longitude,
-        'appid': api_key,
-        'units': 'metric',
-    }
-
-    response = requests.get(base_url, params=params)
-    data = response.json()
-    weather_description = data['list'][index]['weather'][index]['icon']
-    
-    if weather_description == '01n':
-        weather_icon = 'bi bi-brightness-high'
-    elif weather_description == '01d':
-        weather_icon = 'bi bi-moon'
-    elif weather_description == '02n':
-        weather_icon = 'bi bi-cloud-sun'
-    elif weather_description == '02d':
-        weather_icon = 'bi bi-cloud-moon'  
-    elif weather_description == '03d' or weather_description == '03n':
-        weather_icon = 'bi bi-cloud'   
-    elif weather_description == '04d' or weather_description == '04n':
-        weather_icon = 'bi bi-clouds'
-    elif weather_description == '09d' or weather_description == '09n' or weather_description == '10d' or weather_description == '10n':
-        weather_icon = 'bi bi-cloud-rain'
-    elif weather_description == '11d' or weather_description == '11n':
-        weather_icon = 'bi bi-cloud-lightning'
-    elif weather_description == '13d' or weather_description == '13n':
-        weather_icon = 'bi bi-cloud-snow'
-    elif weather_description == '50d' or weather_description == '50n':
-        weather_icon = 'bi bi-cloud-haze2'
-    else:  #iconが?になった場合確認する用
-        weather_icon = 'bi bi-question'
-
-    # 最高気温と最低気温はAPIの都合上、現時点での気温になってしまう為、正確性が低い
-    weather_info = {
-        'temperature_max': int(data['list'][index]['main']['temp_max']),
-        'temperature_min': int(data['list'][index]['main']['temp_min']),
-        'humidity': data['list'][index]['main']['humidity'],
-        'weather_icon': weather_icon,
-        'day': int(data['list'][index]['sys']['dt_txt']),
-    }
-
-    return weather_info
 
 def get_weather_info_gpt(api_key, latitude, longitude):
     params = {
