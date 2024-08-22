@@ -75,8 +75,11 @@
                     <div class="openai_logo_right">
                       <img src="{% static 'mymath/powered_by_openai.svg' %}" class="openai_logo" width="130" alt="ロゴ">
                     </div>
-                  </div>                  
-            </form>
+                  </div>  
+                  <div class="right">
+                    読書感想文の自動採点は<a href="{% url 'chat:index' %}">こちら</a>から
+                  </div>
+                </form>
 
             {% if height_result %}
             <p>身長の判定結果: {{ height_result }}</p>

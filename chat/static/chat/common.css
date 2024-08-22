@@ -6,27 +6,28 @@
 }
 
 /* ページ全体のスタイル */
-body {
+.gpteacher-page body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   color: #333;
   margin: 0;
+  padding: 20px;
 }
 
 /* フォームのスタイル */
-.for {
+.gpteacher-page form {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-input[type="file"] {
+.gpteacher-page input[type="file"] {
   display: block;
   margin-top: 10px;
 }
 
-.ans {
+.gpteacher-page button[type="submit"] {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -36,12 +37,12 @@ input[type="file"] {
 }
 
 /* チャット結果のスタイル */
-h2 {
+.gpteacher-page h2 {
   margin-top: 20px;
   font-size: 24px;
 }
 
-p {
+.gpteacher-page p {
   margin-top: 10px;
   font-size: 16px;
   line-height: 1.5;
@@ -51,38 +52,14 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-#id_sentence {
+.gpteacher-page #id_sentence {
   height: 400px;
   width: 600px;
   resize: vertical; /* ユーザーがテキストエリアを縦方向にリサイズできるようにする */
 }
 
-.back {
-  background-color: #6c757d;
-  padding: 0px 20px 0px 20px;
-}
-
-.txt {
-  background-color: white;
-  padding: 20px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  padding: 0 !important;
-}
-
-.ans {
-  margin-right: auto;
-}
-
-.openai_logo_right {
-  display: flex;
-  align-items: center;
-}
-
-.right {
+.gpteacher-right {
   text-align: right;
 }
+
+
