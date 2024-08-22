@@ -27,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY_DJANGO')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# production.pyでDEBUG = Falseになっている為、↓がどちらになっていても本番環境ではデバッグがFalseになる。
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://toyo-university-ym-iniad-7gxwnlu9c4g7wrim.onrender.com", "127.0.0.1", 'localhost']
 
