@@ -13,3 +13,4 @@ venv
 db-volumes
 *.sqlite3
 db.sqlite3
+collected_static

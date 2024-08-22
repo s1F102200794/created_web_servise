@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY_DJANGO')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["https://toyo-university-ym-iniad-7gxwnlu9c4g7wrim.onrender.com", "127.0.0.1", 'localhost']
 
@@ -138,6 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Default primary key field type
