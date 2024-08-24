@@ -101,6 +101,7 @@ def chat_GPT_response(api_key, latitude, longitude):
         )
         return response.choices[0].message.content
     
+    # 予備のOpenAI API用 通常時は使用しない
     except openai.RateLimitError as e:
         try:
             client = openai.OpenAI(api_key=api_key_gpt_my, base_url=base_url_gpt_my)
@@ -144,6 +145,8 @@ def chat_GPT_response_jap(api_key, latitude1, longitude1, latitude2, longitude2,
             ],
         )
         return response.choices[0].message.content
+    
+    # 予備のOpenAI API用 通常時は使用しない
     except openai.RateLimitError as e:
         try:
             client = openai.OpenAI(api_key=api_key_gpt_my, base_url=base_url_gpt_my)
@@ -168,7 +171,6 @@ def chat_GPT_response_jap(api_key, latitude1, longitude1, latitude2, longitude2,
             return ("トークンの上限に達してしまいました。24時間後に回復しますので、そのあとに試してみてください。")
 
 
-# Chat_GPT_APIを使用
 @login_required
 def Japan_weather_gpt(request):
     

@@ -134,6 +134,7 @@ def height_quiz_view(request):
 
         return render(request, 'mymath/quiz.html', context)
     
+    # 予備のOpenAI API用 通常時は使用しない
     except openai.RateLimitError as e:
         try:
             height_form = HeightQuizForm(prefix="height")

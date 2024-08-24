@@ -105,7 +105,10 @@
             <p>類題: {{ chat_results2 }}</p>
             {% endif %}
 
+            {% if similar_question or similar_question2 %}
             <button type="button" onclick="toggleResults()" class="ans">解答を表示する</button>
+            {% endif %}
+
             {% if similar_question %}
             <p id="similar_question" style="display: none;">解答: {{ similar_question }}</p>
             {% endif %}
@@ -118,18 +121,23 @@
                     var similarQuestion2 = document.getElementById("similar_question2");
                     var button = document.querySelector("button[onclick='toggleResults()']");
 
-                    if (similarQuestion.style.display === "none") {
+                    if (similarQuestion && similarQuestion.style.display === "none") {
                         similarQuestion.style.display = "block";
-                        button.innerHTML = "解答を非表示にする";
-                    } else {
+                    } else if (similarQuestion) {
                         similarQuestion.style.display = "none";
-                        button.innerHTML = "解答を表示する";
                     }
 
-                    if (similarQuestion2.style.display === "none") {
+                    if (similarQuestion2 && similarQuestion2.style.display === "none") {
                         similarQuestion2.style.display = "block";
-                    } else {
+                    } else if (similarQuestion2) {
                         similarQuestion2.style.display = "none";
+                    }
+
+                    if ((similarQuestion && similarQuestion.style.display === "block") || 
+                        (similarQuestion2 && similarQuestion2.style.display === "block")) {
+                        button.innerHTML = "解答を非表示にする";
+                    } else {
+                        button.innerHTML = "解答を表示する";
                     }
                 }
             </script>
