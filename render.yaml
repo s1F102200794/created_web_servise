@@ -2,7 +2,7 @@ services:
   - type: web
     name: Toyo_University_YM_iniad_7GxwNLu9C4g7wriM
     env: python
-    plan: Starter
+    plan: free
     branch: main
     buildCommand: "./build.sh"
     startCommand: "gunicorn config.wsgi:application"

@@ -46,8 +46,6 @@ def lock(request):
     return render(request, 'accounts/lock.html')
 
 
-
-
 class ContactFormView(FormView):
     template_name = 'accounts/contact_form.html'
     form_class = ContactForm
