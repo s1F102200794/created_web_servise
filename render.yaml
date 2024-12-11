@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Toyo_University_YM_iniad_7GxwNLu9C4g7wriM
+    name: Toyo_University_YM079_iniad
     env: python
     plan: free
     branch: main
