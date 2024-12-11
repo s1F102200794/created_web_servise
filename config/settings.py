@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY_DJANGO')
 # production.pyでDEBUG = Falseになっている為、↓がどちらになっていても本番環境ではデバッグがFalseになる。
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://toyo-university-ym-iniad-7gxwnlu9c4g7wrim.onrender.com", "127.0.0.1", 'localhost']
+ALLOWED_HOSTS = ["https://toyo-university-ym-iniad-7gxwnlu9c4g7wrim.onrender.com", "https://toyo-university-ym079-iniad.onrender.com", "127.0.0.1", 'localhost']
 
 
 # Application definition
